@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(( $(bc -l<<<"WATER+STIR") | bestchol))
+echo $(bc -l<<<"scale=0; $(expr $WATER + $STIR) | tr water stir bestchol")
